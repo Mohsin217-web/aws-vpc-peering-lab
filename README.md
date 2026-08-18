@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project demonstrates how to establish private network connectivity between two Amazon VPCs using VPC Peering.
+This project demonstrates private network connectivity between two AWS VPCs using VPC Peering.
 
-The lab covers VPC creation, subnet configuration, route tables, Internet Gateways, EC2 instances, security groups, VPC Peering, routing, and connectivity testing.
+The lab includes VPCs, subnets, route tables, Internet Gateways, EC2 instances, Security Groups, VPC Peering, and connectivity testing.
 
 ## Architecture
 
@@ -27,30 +27,17 @@ The lab covers VPC creation, subnet configuration, route tables, Internet Gatewa
 - Internet Gateway
 - Security Groups
 
-## Architecture Components
-
-### VPC-A
-
-- CIDR: `10.0.0.0/16`
-- Public Subnet: `10.0.1.0/24`
-- Route Table: `RT-VPC-A-Public`
-- Internet Gateway: `IGW-VPC-A`
-
-### VPC-B
-
-- CIDR: `20.0.0.0/16`
-- Public Subnet: `20.0.1.0/24`
-- Route Table: `RT-VPC-B-Public`
-- Internet Gateway: `IGW-VPC-B`
-
 ## VPC Peering
 
 A VPC Peering connection was created between VPC-A and VPC-B.
 
-**Peering Status:** Active
+**Status:** Active
 
-The VPCs use non-overlapping CIDR ranges:
+## Route Configuration
+
+### VPC-A
 
 ```text
-VPC-A: 10.0.0.0/16
-VPC-B: 20.0.0.0/16
+10.0.0.0/16 → local
+20.0.0.0/16 → VPC Peering
+0.0.0.0/0 → Internet Gateway
