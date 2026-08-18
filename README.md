@@ -8,7 +8,7 @@ The lab includes VPCs, subnets, route tables, Internet Gateways, EC2 instances, 
 
 ## Architecture
 
-![AWS VPC Peering Architecture](architecture-diagram.png)
+![AWS VPC Peering Architecture](architecture-diagram.png.png)
 
 ## Network Design
 
